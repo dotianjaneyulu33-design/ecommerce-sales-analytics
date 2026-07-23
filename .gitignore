@@ -25,3 +25,4 @@ replay_pid*
 
 # Raw datasets (too large / not source code)
 database/raw-data/
+database/clean-data/
