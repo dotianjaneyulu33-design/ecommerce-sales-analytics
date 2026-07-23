@@ -13,16 +13,16 @@
           <mxGeometry x="40" y="180" width="180" height="90" as="geometry" />
         </mxCell>
 
-        <mxCell id="product" value="PRODUCT&#10;-&#10;product_pk (PK)&#10;id&#10;platform_id (FK)&#10;category_id (FK)&#10;product_name&#10;price&#10;mrp&#10;discount_pct&#10;rating&#10;rating_count&#10;brand" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="340" y="80" width="220" height="220" as="geometry" />
+        <mxCell id="product" value="PRODUCT&#10;-&#10;product_pk (PK)&#10;id&#10;platform_id (FK, NOT NULL)&#10;category_id (FK, NOT NULL)&#10;product_name&#10;price&#10;mrp&#10;discount_pct&#10;rating&#10;rating_count&#10;brand&#10;created_at" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="80" width="220" height="240" as="geometry" />
         </mxCell>
 
-        <mxCell id="sales" value="SALES&#10;-&#10;sale_id (PK)&#10;product_pk (FK)&#10;order_date&#10;quantity&#10;revenue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="680" y="40" width="200" height="110" as="geometry" />
+        <mxCell id="sales" value="SALES&#10;-&#10;sale_id (PK)&#10;product_pk (FK, NOT NULL)&#10;order_date&#10;quantity&#10;revenue (derived)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="40" width="200" height="120" as="geometry" />
         </mxCell>
 
-        <mxCell id="review" value="REVIEW&#10;-&#10;review_pk (PK)&#10;product_pk (FK)&#10;reviewer_name&#10;review_content&#10;sentiment&#10;is_fake" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="680" y="200" width="200" height="130" as="geometry" />
+        <mxCell id="review" value="REVIEW&#10;-&#10;review_pk (PK)&#10;product_pk (FK, NOT NULL)&#10;reviewer_name&#10;review_content&#10;sentiment&#10;is_fake&#10;fake_confidence" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="200" width="200" height="150" as="geometry" />
         </mxCell>
 
         <mxCell id="user" value="USER&#10;-&#10;user_id (PK)&#10;username&#10;password&#10;role" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=top;fontStyle=1" vertex="1" parent="1">
